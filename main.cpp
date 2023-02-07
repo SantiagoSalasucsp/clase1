@@ -1,69 +1,26 @@
 #include <iostream>
-#include "DynamicArray.h"
-#include "Point.h"
+#include "Stack.h"
 
 using namespace std;
 
-
-
-
-
 int main() {
-    // DynamicArray de Enteroos uwu
-    int arr[]={4,5,6,8,1,2,23,56,0};
-    int tam = sizeof(arr)/sizeof(arr[0]);  
-    DynamicArray<int> Entero(arr, tam);
-    cout << "Size: " << Entero.getSize() << endl;
-    Entero.insert(6,1000);
-    cout<<endl;
-    Entero.print();
-    cout<<endl;
-    Entero.push_back(9999);
-    Entero.print();
-    cout<<endl;
-    Entero.remove(6);
-    Entero.print();
-    cout<<endl;
-    Entero.clearUwU();
-    Entero.print();
-    cout<<endl;
-  
 
-    // DynamicArray de doubles uwu
-    double arruwu[]={0.2,0.3,0.4,0.5};
-    int tamuwu = sizeof(arruwu)/sizeof(arruwu[0]);  
-    DynamicArray<double> arraycito (arruwu,tamuwu);
-    arraycito.insert(4,0.3);
-    arraycito.print();
-    arraycito.push_back(0.6);
-    arraycito.print();
-    arraycito.remove(2);
-    arraycito.print();
-    arraycito.clearUwU();
-    arraycito.print();
- 
-    // DynamicArray de string uwu
-    string arrString[]={"hola","holita","holasa","holilita","chau"};
-    int tamString=sizeof(arrString)/sizeof(*arrString);
-    DynamicArray<string>da1(arrString,tamString);
+    Stack<int> s1;
+    Stack<int> s2;
+    s1.push(1);
+    s1.push(2);
+    s1.push(3);
+    s1.push(4);
 
-    da1.print();
-    da1.push_back("adios");
-    da1.print();
-    da1.insert(0,"hi");
-    da1.print();
-    da1.remove(2);
-    da1.print();
-    da1.clearUwU();
-    da1.print();
- /*   
-    // DynamicArray de Point uwu
-    Point arrp[5];
-    int tamp=sizeof(arrp)/sizeof(*arrp);
-    DynamicArray<Point>da2(arrp,tamp);
+    s2.push(1);
+    s2.push(2);
+    s2.push(3);
+    s2.push(4);
+    s2.push(5);
+    s2.push(6);
 
-    da2.print();
-    // No tengo funcion print :(
-*/
+    cout << s1 << endl;
+    cout << s2 << endl;
+    cout<<s1+s2<<endl;
     return 0;
 }
